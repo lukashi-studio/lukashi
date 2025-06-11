@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LUKASHI</title>
+  <style>
+    :root {
+      --bg-color: #0a0a0a;
+      --text-color: #f5f5f5;
+    }
+    body.light {
+      --bg-color: #ffffff;
+      --text-color: #000000;
+    }
+    body {
+      margin: 0;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: 'Helvetica Neue', sans-serif;
+      transition: background-color 0.4s ease, color 0.4s ease;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      background-color: var(--bg-color);
+    }
+    nav a {
+      margin-left: 2rem;
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .switch {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1000;
+    }
+    .hero {
+      text-align: center;
+      padding: 5rem 2rem;
+      animation: fadeIn 1.5s ease-in;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+    .intro {
+      text-align: center;
+      padding: 2rem 2rem;
+      max-width: 800px;
+      margin: auto;
+      animation: fadeIn 1.8s ease-in;
+    }
+    .gallery-preview {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 2rem;
+      animation: slideIn 2s ease-in-out;
+    }
+    .gallery-preview img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .section {
+      padding: 4rem 2rem;
+    }
+    .section h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .contact-links a {
+      color: var(--text-color);
+      text-decoration: none;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <button class="switch" onclick="document.body.classList.toggle('light')">🌓</button>
+  <header>
+    <h1 style="margin: 0;">LUKASHI</h1>
+    <nav>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Kontakt</a>
+      <a href="https://www.instagram.com/tvujprofil" target="_blank">Instagram</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Vizuální příběhy od LUKASHI</h1>
+  </section>
+
+  <section class="intro">
+    <p>Jsem Lukashi. Věnuji se fotografii a tvorbě videí s citem pro detail, pohyb a emoci. Miluju hrát si se světlem, stínem i rytmem střihu. Každý záběr je pro mě jako obraz – osobní, syrový a ostrý.</p>
+    <p>Pracuji s lidmi, značkami i momenty, které si zaslouží být zachyceny jinak. Podívej se, co tvořím.</p>
+  </section>
+
+  <section class="gallery-preview">
+    <img src="galerie/priklad1.jpg" alt="Preview 1">
+    <img src="galerie/priklad2.jpg" alt="Preview 2">
+    <img src="galerie/priklad3.jpg" alt="Preview 3">
+  </section>
+
+  <section class="section" id="portfolio">
+    <h2>Moje tvorba</h2>
+    <div class="contact-links">
+      <a href="fotky/auta.html">Fotky – Auta</a>
+      <a href="fotky/svatby.html">Fotky – Svatby</a>
+      <a href="fotky/priroda.html">Fotky – Příroda</a>
+      <a href="fotky/lide.html">Fotky – Lidé</a>
+      <a href="fotky/streetart.html">Fotky – Streetart</a>
+      <a href="videa/auta.html">Videa – Auta</a>
+      <a href="videa/svatby.html">Videa – Svatby</a>
+      <a href="videa/promo.html">Videa – Promo</a>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Kontaktuj mě</h2>
+    <p style="text-align:center;">Chceš nafotit projekt, video nebo se jen zeptat?</p>
+    <div class="contact-links">
+      <a href="mailto:tvuj@email.cz">E-mail</a>
+      <a href="https://www.instagram.com/tvujprofil" target="_blank">Instagram</a>
+      <a href="https://wa.me/420123456789" target="_blank">WhatsApp</a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 LUKASHI. Všechna práva vyhrazena.
+  </footer>
+</body>
+</html>
